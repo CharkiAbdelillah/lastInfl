@@ -1,0 +1,11 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "abdo"]
+	url = https://github.com/CharkiAbdelillah/app_influ
+	fetch = +refs/heads/*:refs/remotes/abdo/*
+[branch "main"]
+	remote = abdo
+	merge = refs/heads/main
