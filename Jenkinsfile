@@ -28,6 +28,7 @@ pipeline{
         stage('deploy'){
             steps{
                 sh '''
+                sudo su jenkins
                 ssh -tt abdo@20.98.160.69 -p 22
                 hostname
                 ls
