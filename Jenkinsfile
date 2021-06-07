@@ -25,5 +25,16 @@ pipeline{
                 '''
             }
         }
+        stage('deploy2'){
+            steps{
+                sh '''ssh abdo@10.0.0.4"
+                hostname
+                ls
+                cd /var/www
+                ls"
+                hostname
+                '''
+            }
+        }
     }
 }
