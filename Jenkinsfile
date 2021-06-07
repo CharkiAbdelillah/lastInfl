@@ -27,7 +27,7 @@ pipeline{
         }
         stage('deploy2'){
             steps{
-                sh '''ssh abdo@10.0.0.4"
+                sh '''ssh abdo@10.0.0.4 -p 22"
                 hostname
                 ls
                 cd /var/www
