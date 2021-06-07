@@ -18,7 +18,10 @@ pipeline{
             steps{
                 sh '''
                     echo "runing comming"
-                    python hello.py
+		    echo "ls"
+		    ls
+		    cd /var/www/app3/laravel
+                    php hello.php
                 '''
             }
         }
