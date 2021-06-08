@@ -14,6 +14,25 @@ pipeline{
                 '''
             }
         }
+        stage('test'){
+            steps{
+                sh '''
+                    echo "ls"
+                    ls
+                    cd /var/www/app3/
+                    ls
+                    echo "Test unitaire"
+                        php artisan test --filter  testHomePage
+                    echo "Test fonctionnel"
+                        php artisan test --filter testStoreInfluenceur
+                    echo "Test integration"
+                        php artisan test --filter testSaveInfluenceur
+
+                    cd /laravel
+                    php hello.php
+                '''
+            }
+        }
         stage('run'){
             steps{
                 sh '''
