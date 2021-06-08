@@ -50,10 +50,11 @@ pipeline{
         stage('deploy'){
             steps{
                 sh '''ssh abdo@20.98.160.69 -p 22 "
-                git pull origin main
+                
                 hostname
                 ls
-                cd /var/www
+                cd /var/www/lastInfl
+                git pull origin main
                 ls
                 "
                 hostname
