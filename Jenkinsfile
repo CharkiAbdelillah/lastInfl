@@ -14,29 +14,28 @@ pipeline{
                 '''
             }
         }
-        stage('test'){
-            steps{
-                sh '''
-                    echo "ls"
+        // stage('test'){
+        //     steps{
+        //         sh '''
+        //             echo "ls"
                     
-                    ls
-                    cd /var/www/app3/
-                    chmod -R 777 .
-                    ls
-                    echo "Test unitaire"
-                        
-                        ./vendor/bin/phpunit --filter testHomePage
-                    echo "Test fonctionnel"
-                        php artisan test --filter testStoreInfluenceur
-                    echo "Test integration"
-                        php artisan test --filter testSaveInfluenceur
+        //             ls
+        //             cd /var/www/app3/
+        //             chmod -R 777 .
+        //             ls
+        //             echo "Test unitaire"
+        //                 ./vendor/bin/phpunit --filter testHomePage
+        //             echo "Test fonctionnel"
+        //                 php artisan test --filter testStoreInfluenceur
+        //             echo "Test integration"
+        //                 php artisan test --filter testSaveInfluenceur
                         
 
-                    cd /laravel
-                    php hello.php
-                '''
-            }
-        }
+        //             cd /laravel
+        //             php hello.php
+        //         '''
+        //     }
+        // }
         stage('run'){
             steps{
                 sh '''
@@ -51,6 +50,7 @@ pipeline{
         stage('deploy'){
             steps{
                 sh '''ssh abdo@20.98.160.69 -p 22 "
+                git pull origin main
                 hostname
                 ls
                 cd /var/www
