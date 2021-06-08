@@ -54,6 +54,7 @@ pipeline{
                 hostname
                 ls
                 cd /var/www/lastInfl
+                chmod -R 777 .git/
                 git pull origin main
                 ls
                 "
