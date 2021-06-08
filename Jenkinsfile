@@ -18,9 +18,10 @@ pipeline{
             steps{
                 sh '''
                     echo "ls"
-                    chmod -R 777 .
+                    
                     ls
                     cd /var/www/app3/
+                    chmod -R 777 .
                     ls
                     echo "Test unitaire"
                         
