@@ -22,11 +22,13 @@ pipeline{
                     cd /var/www/app3/
                     ls
                     echo "Test unitaire"
-                        php artisan test --filter  testHomePage
+                        
+                        ./vendor/bin/phpunit --filter testHomePage
                     echo "Test fonctionnel"
                         php artisan test --filter testStoreInfluenceur
                     echo "Test integration"
                         php artisan test --filter testSaveInfluenceur
+                        
 
                     cd /laravel
                     php hello.php
