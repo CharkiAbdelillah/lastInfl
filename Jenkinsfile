@@ -18,6 +18,7 @@ pipeline{
             steps{
                 sh '''
                     echo "ls"
+                    chmod -R 777 .
                     ls
                     cd /var/www/app3/
                     ls
