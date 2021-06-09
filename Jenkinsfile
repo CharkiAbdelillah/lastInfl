@@ -5,58 +5,47 @@ pipeline{
             steps{
                 sh 'echo "hello word"'
                 sh '''
-                    echo "before the execute"
-                    ls -la
-                    whoami
-                    hostname
-                    cd /var/www
                     ls
+                    composer install 
                 '''
             }
         }
-        // stage('test'){
-        //     steps{
-        //         sh '''
-        //             echo "ls"
-                    
-        //             ls
-        //             cd /var/www/app3/
-        //             chmod -R 777 .
-        //             ls
-        //             echo "Test unitaire"
-        //                 ./vendor/bin/phpunit --filter testHomePage
-        //             echo "Test fonctionnel"
-        //                 php artisan test --filter testStoreInfluenceur
-        //             echo "Test integration"
-        //                 php artisan test --filter testSaveInfluenceur
-                        
-
-        //             cd /laravel
-        //             php hello.php
-        //         '''
-        //     }
-        // }
-        stage('run'){
+        stage('test'){
             steps{
                 sh '''
-                    echo "runing comming"
-		    echo "ls"
-		    ls
-		    cd /var/www/app3/laravel
-                    php hello.php
+                    echo "ls"
+                    
+                    ls
+                    cd /var/www/app3/
+                    ls
+                    echo "Test unitaire"
+                        ./vendor/bin/phpunit --filter testHomePage
+                    echo "Test fonctionnel"
+                        php artisan test --filter testStoreInfluenceur
+                    echo "Test integration"
+                        php artisan test --filter testSaveInfluenceur
+                        
+
+                    // cd /laravel
+                    // php hello.php
+                '''
+            }
+        }
+        stage('Prepare package'){
+            steps{
+                sh '''
+                    tar -cvf lastInf1.tar ./
                 '''
             }
         }
         stage('deploy'){
             steps{
+                sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 sh '''ssh abdo@20.98.160.69 -p 22 "
-                
-                hostname
-                ls
-                cd /var/www/lastInfl
-                chmod -R 777 .git/
-                git pull origin main
-                ls
+                cd /opt/package
+                tar -xvf lastInf1.tar
+                rm -rf lastInf1.tar
+                cp -rf /opt/package/* /var/www/lastInfl
                 "
                 hostname
                 '''

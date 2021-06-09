@@ -1,0 +1,6 @@
+projectKey=project:Test
+serverUrl=http://localhost:9000
+serverVersion=8.5.1.38104
+dashboardUrl=http://localhost:9000/dashboard?id=project%3ATest
+ceTaskId=AXnuNRwdr_epApX-dByg
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXnuNRwdr_epApX-dByg
