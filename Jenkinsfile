@@ -23,11 +23,7 @@ pipeline{
                     echo "Test fonctionnel"
                         php artisan test --filter testStoreInfluenceur
                     echo "Test integration"
-                        php artisan test --filter testSaveInfluenceur
-                        
-
-                    // cd /laravel
-                    // php hello.php
+                        ./vendor/bin/phpunit --filter testSaveInfluenceur
                 '''
             }
         }
