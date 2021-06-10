@@ -38,8 +38,8 @@ pipeline{
         }
         stage('deploy'){
             steps{
+                /*sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'*/
                 sh 'scp ./lastInf1.tar abdo@20.98.160.69:/opt/package'
-                /*sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 sh '''ssh abdo@20.98.160.69 -p 22 "
                 cd /opt/package
                 tar -xvf lastInf1.tar
@@ -47,7 +47,7 @@ pipeline{
                 cp -rf /opt/package/* /var/www/lastInfl
                 "
                 hostname
-                '''*/
+                '''
             }
         }
     }
