@@ -41,9 +41,13 @@ pipeline{
                 /*sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'*/
                 // sh 'scp ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 sh '''ssh abdo@20.98.160.69 -p 22 "
+                echo 'cd'
                 cd /opt/package
+                echo 'tar -xvf'
                 tar -xvf lastInf1.tar
+                echo 'remove'
                 rm -rf lastInf1.tar
+                echo 'cp'
                 cp -rf /opt/package/* /var/www/lastInfl
                 "
                 hostname
