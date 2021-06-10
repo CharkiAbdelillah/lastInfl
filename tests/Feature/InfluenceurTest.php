@@ -38,19 +38,19 @@ class InfluenceurTest extends TestCase
             // ->assertStatus(200);
         // $this->assertDatabaseMissing('personnes',['nom'=>'charki2']); //ne contient pas
     }
-    public function testStoreInfluenceurFail()
-    {
-        $data=[
-            'name'=>'',
-            'prenom'=>'',
-            'photo'=>'',
-            'ville'=>'',
-            'daten'=>''
-        ];
+    // public function testStoreInfluenceurFail()
+    // {
+    //     $data=[
+    //         'name'=>'',
+    //         'prenom'=>'',
+    //         'photo'=>'',
+    //         'ville'=>'',
+    //         'daten'=>''
+    //     ];
 
-        $this->post('api/personne',$data)
-            ->assertJsonValidationErrors(['message'=>'Ajout bien fait']);
-            // ->assertStatus(200);
-        // $this->assertDatabaseMissing('personnes',['nom'=>'charki2']); //ne contient pas
-    }
+    //     $this->post('api/personne',$data)
+    //         ->assertJsonValidationErrors(['message'=>'Ajout bien fait']);
+    //         // ->assertStatus(200);
+    //     // $this->assertDatabaseMissing('personnes',['nom'=>'charki2']); //ne contient pas
+    // }
 }
