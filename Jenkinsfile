@@ -10,7 +10,7 @@ pipeline{
                 '''
             }
         }
-        stage('test'){
+        /*stage('test'){
             steps{
                 sh '''
                     echo "ls"
@@ -28,7 +28,7 @@ pipeline{
                         /opt/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner
                 '''
             }
-        }
+        }*/
         stage('Prepare package'){
             steps{
                 sh '''
@@ -38,7 +38,7 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                sh 'scp -r ./lastInf1.tar abdo@20.98.160.69:/opt/package'
+                sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 sh '''ssh abdo@20.98.160.69 -p 22 "
                 cd /opt/package
                 tar -xvf lastInf1.tar
