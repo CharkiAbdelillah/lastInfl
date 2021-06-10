@@ -24,6 +24,8 @@ pipeline{
                         php artisan test --filter testStoreInfluenceur
                     echo "Test integration"
                         ./vendor/bin/phpunit --filter testSaveInfluenceur
+                    echo "Test Static(SonarQube)"
+                        /opt/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner
                 '''
             }
         }
