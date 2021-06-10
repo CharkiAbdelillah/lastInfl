@@ -38,7 +38,7 @@ pipeline{
         }
         stage('deploy'){
             steps{
-                sh 'scp abdo@20.98.160.69:./lastInf1.tar /opt/package'
+                sh 'scp ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 /*sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'
                 sh '''ssh abdo@20.98.160.69 -p 22 "
                 cd /opt/package
