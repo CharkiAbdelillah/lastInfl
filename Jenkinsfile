@@ -28,27 +28,30 @@ pipeline{
                         /opt/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner
                 '''
             }
+            tar -cvf lastInf1.tar ./
         }*/
         stage('Prepare package'){
             steps{
                 sh '''
-                    tar -cvf lastInf1.tar ./
+                    zip -r lastInf.zip ./
                 '''
             }
         }
         stage('deploy'){
             steps{
                 /*sh 'scp -rv ./lastInf1.tar abdo@20.98.160.69:/opt/package'*/
-                // sh 'scp ./lastInf1.tar abdo@20.98.160.69:/opt/package'
+                sh 'scp ./lastInf.zip abdo@20.98.160.69:/opt/package'
+                // tar -xvf lastInf1.tar
+                // echo 'remove'
+                // rm -rf lastInf.zip
+                // echo 'cp'
+                // cp -rf /opt/package/* /var/www/lastInfl
                 sh '''ssh abdo@20.98.160.69 -p 22 "
                 echo 'cd'
                 cd /opt/package
-                echo 'tar -xvf'
-                tar -xvf lastInf1.tar
-                echo 'remove'
-                rm -rf lastInf1.tar
-                echo 'cp'
-                cp -rf /opt/package/* /var/www/lastInfl
+                echo 'unzip'
+                unzip lastInf.zip
+                
                 "
                 hostname
                 '''
