@@ -6,7 +6,7 @@ pipeline{
                 sh 'echo "hello word"'
                 sh '''
                     ls
-                    composer install 
+                    composer install
                 '''
             }
         }
@@ -52,6 +52,8 @@ pipeline{
                 echo 'unzip'
                 unzip -o lastInf.zip
                 rm -rf lastInf.zip
+                cp -rf /opt/package/* /var/www/lastInfl
+                npm run dev
                 "
                 hostname
                 '''
