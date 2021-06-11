@@ -50,8 +50,8 @@ pipeline{
                 echo 'cd'
                 cd /opt/package
                 echo 'unzip'
-                unzip lastInf.zip
-                
+                unzip -o lastInf.zip
+                rm -rf lastInf.zip
                 "
                 hostname
                 '''

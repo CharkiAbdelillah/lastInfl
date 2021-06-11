@@ -116,9 +116,6 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<span>
-									<span>test hi : </span>
-								</span>
 								<p><b>Nombre d’abonnés: </b>{{getOnePersonne[0].instagram.nombre_abonne}}</p>
 								<p><b>Moyenne des likes: </b>{{getOnePersonne[0].instagram.like}}</p>
 								<p><b>Moyenne des commentaires: </b>{{getOnePersonne[0].instagram.commentaire}}</p>
