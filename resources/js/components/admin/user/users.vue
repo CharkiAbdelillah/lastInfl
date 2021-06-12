@@ -86,7 +86,7 @@
                 Swal.fire({
                     position:'center',
                     title: 'etes vous sur?',
-                    text: "test test test!",
+                    // text: "test test test!",
                     icon: 'warning',
                     showCancelButton: true,
                     showConfirmationButton: true,
@@ -101,7 +101,7 @@
                             this.users=response.data;
                                 Swal.fire(
                                     'Deleted!',
-                                    'Your file has been deleted.',
+                                    'User has been deleted.',
                                     'success'
                                 )
                                 }).catch(()=>{

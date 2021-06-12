@@ -59,9 +59,9 @@
                         <td>{{user3.added }}</td>
                         <td>{{user3.updated }}</td>
                           <td><button  type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInfl" @click="getPersonne(user3.id)">
-                          Editer1</button>
+                          info personnelles</button>
                           <button v-if="user3.info" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflInfo" @click="getPersonneInfo(user3.id)">
-                          Editer2</button>
+                          info physiques</button>
                           <!-- <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflType2" @click="getPersonneType(user3.id)">
                            Editer3</button>-->
                           <button v-if="user3.instagram" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflInsta" @click="getPersonneInstagram(user3.id)">
@@ -159,7 +159,7 @@
                           </div>
                               <div class="modal-footer">
                                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  <button type="button" class="btn btn-primary">Ok</button>
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
                               </div>
                           </div>
                           </div>
@@ -281,7 +281,7 @@
                 Swal.fire({
                     position:'center',
                     title: 'etes vous sur?',
-                    text: "test test test!",
+                    // text: "test test test!",
                     icon: 'warning',
                     showCancelButton: true,
                     showConfirmationButton: true,

@@ -7,7 +7,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modifier les informations </h5>
+        <h5 class="modal-title" id="exampleModalLabel">Modifier les informations de facebook</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -53,7 +53,7 @@
 <multiselect v-model="personne5.data.fb.domaine" :options="options" :multiple="true"  placeholder="Select domaine" label="nom" track-by="nom"></multiselect>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Retour</button>
-            <button type="submit"  class="btn btn-success">Cree4</button>
+            <button type="submit"  class="btn btn-success">Modifié</button>
           </div>
         </form>
       </div>

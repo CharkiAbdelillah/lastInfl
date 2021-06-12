@@ -102,7 +102,7 @@
                   <li class="{{'admin/gestion_client'== request()->path()? 'active': ''}}">
                     <a href="/admin/gestion_client">
                       <i class="now-ui-icons users_single-02"></i>
-                      <p>Gestion des clients</p>
+                      <p>Gestion des utilisateurs</p>
                     </a>
                   </li>
                   <li>

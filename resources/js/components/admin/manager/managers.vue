@@ -88,7 +88,7 @@
                 Swal.fire({
                     position:'center',
                     title: 'etes vous sur?',
-                    text: "test test test!",
+                    // text: "test test test!",
                     icon: 'warning',
                     showCancelButton: true,
                     showConfirmationButton: true,

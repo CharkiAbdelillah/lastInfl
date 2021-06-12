@@ -10,11 +10,10 @@ pipeline{
                 '''
             }
         }
-        /*stage('test'){
+        stage('test'){
             steps{
                 sh '''
-                    echo "ls"
-                    
+                    echo "ls"                    
                     ls
                     cd /var/www/app3/
                     ls
@@ -28,8 +27,7 @@ pipeline{
                         /opt/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner
                 '''
             }
-            tar -cvf lastInf1.tar ./
-        }*/
+        }
         stage('Prepare package'){
             steps{
                 sh '''
@@ -53,7 +51,7 @@ pipeline{
                 unzip -o lastInf.zip
                 rm -rf lastInf.zip
                 cp -rf /opt/package/* /var/www/lastInfl
-                npm run dev
+                hostname
                 "
                 hostname
                 '''

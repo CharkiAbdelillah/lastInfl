@@ -10,7 +10,7 @@
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title">La liste des clients
+                <h4 class="card-title">La liste des utilisateurs
 
 
                   <div id="app">
