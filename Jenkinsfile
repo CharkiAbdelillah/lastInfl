@@ -10,7 +10,7 @@ pipeline{
                 '''
             }
         }
-        stage('test'){
+        /*stage('test'){
             steps{
                 sh '''
                     echo "ls"                    
@@ -27,7 +27,7 @@ pipeline{
                         /opt/sonar-scanner-4.6.0.2311-linux/bin/sonar-scanner
                 '''
             }
-        }
+        }*/
         stage('Prepare package'){
             steps{
                 sh '''

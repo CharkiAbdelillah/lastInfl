@@ -220,11 +220,11 @@
       <div class="panel-header panel-header-sm">
       </div>
       <div class="content">
-      @yield('content');  
+      @yield('content')
       </div>
       <footer class="footer">
         <div class=" container-fluid ">
-          <nav>
+          {{-- <nav>
             <ul>
               <li>
                 <a href="https://www.creative-tim.com">
@@ -242,7 +242,7 @@
                 </a>
               </li>
             </ul>
-          </nav>
+          </nav> --}}
           <div class="copyright" id="copyright">
             &copy; <script>
               document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))

@@ -12,6 +12,7 @@ use App\Type_activite;
 use App\ActiviteDomaine;
 use Illuminate\Support\Facades\DB;
 use App\Domaine;
+use App\User;
 use App\Domaine_Histo_Domaine;
 use App\Facebook;
 use App\Snapchat;
@@ -79,6 +80,25 @@ class PersonneController extends Controller
         $personne=Personne::orderBy('created_at', 'desc')->first();
         return response()->json($personne->id);
     }
+    public function allInfl()
+    {
+        $personne=Personne::all()->count();
+        // dd($personne);
+        return response()->json($personne);
+    }
+    public function allManager()
+    {
+        $manager=User::where('is_admin','2')->count();
+        // dd($manager);
+        return response()->json($manager);
+    }
+    public function allUser()
+    {
+        $user=User::where('is_admin','0')->count();
+        // dd($user);
+        return response()->json($user);
+    }
+    
     /**
      * Show the form for creating a new resource.
      *

@@ -11,6 +11,7 @@ const store = new Vuex.Store({
         category23s: [],
         posts: {},
         iddd:'',
+        allInfl:'',
         todos:[
             {id:1,name:'apple1',age:12},
             {id:2,name:'apple2',age:16},
@@ -44,6 +45,13 @@ const store = new Vuex.Store({
          })
          }
        ,
+       getAllInfl({ commit }) {
+         axios.get('/api/allInfl')
+         .then(response => {
+            commit('SET_AllInfl', response.data)
+         })
+         }
+       ,
         allCategoryFromDatabase(context){
  
            axios.get("api/personne")
@@ -63,6 +71,9 @@ const store = new Vuex.Store({
       },
       SET_Personne(state, posts) {
          state.posts = posts
+      },
+      SET_AllInfl(state, nmbr) {
+         state.allInfl = nmbr
       },
       categories(state,id) {
             axios.get("user/personne/"+id).then((response)=>{

@@ -73,9 +73,10 @@ Vue.component('add-inflYtb', require('./components/manager/youtube.vue').default
 Vue.component('add-inflSnap', require('./components/manager/snapchat.vue').default);
 // Vue.component('edit-inflType', require('./components/manager/editInfType.vue').default);
 // Vue.component('edit-inflInsta', require('./components/manager/editInstagram.vue').default);
-
 //*user*
-// Vue.component('user_home', require('./components/user/home.vue').default);
+Vue.component('card-infl', require('./components/admin/cardInfl.vue').default);
+Vue.component('card-manager', require('./components/admin/cardManager.vue').default);
+Vue.component('card-user', require('./components/admin/cardUser.vue').default);
 Vue.component('app-home', require('./AppHome.vue').default);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
