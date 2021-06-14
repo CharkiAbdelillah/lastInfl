@@ -58,26 +58,34 @@
                         </td>
                         <td>{{user3.added }}</td>
                         <td>{{user3.updated }}</td>
-                          <td><button  type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInfl" @click="getPersonne(user3.id)">
+                          <td>
+                            <button  type="button" class="btn btn-primary float-left mr-1" data-toggle="modal" data-target="#updateInfl" @click="getPersonne(user3.id)">
                           info personnelles</button>
-                          <button v-if="user3.info" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflInfo" @click="getPersonneInfo(user3.id)">
+                          <button v-if="user3.info" type="button" class="btn btn-primary float-left mr-1" data-toggle="modal" data-target="#updateInflInfo" @click="getPersonneInfo(user3.id)">
                           info physiques</button>
+                          <ButtonGroup >
+                              <Button v-if="user3.instagram" icon="logo-instagram" data-toggle="modal" data-target="#updateInflInsta" @click="getPersonneInstagram(user3.id)"></Button>
+                              <Button v-if="user3.facebook" icon="logo-facebook" data-toggle="modal" data-target="#updateInflFb" @click="getPersonneFacebook(user3.id)"></Button>
+                              <Button v-if="user3.youtube" icon="logo-youtube" data-toggle="modal" data-target="#updateInflYtb" @click="getPersonneYoutube(user3.id)"></Button>
+                              <Button v-if="user3.snapchat" icon="logo-snapchat" data-toggle="modal" data-target="#updateInflSnap" @click="getPersonneSnapchat(user3.id)"></Button>
+                            </ButtonGroup>
                           <!-- <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflType2" @click="getPersonneType(user3.id)">
                            Editer3</button>-->
-                          <button v-if="user3.instagram" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflInsta" @click="getPersonneInstagram(user3.id)">
-                          Instagram</button> 
-                          <button v-if="user3.facebook" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflFb" @click="getPersonneFacebook(user3.id)">
+                          <!-- <br><a v-if="user3.instagram" type="button"  data-toggle="modal" data-target="#updateInflInsta" @click="getPersonneInstagram(user3.id)">
+                          <Icon type="logo-instagram" /></a>  -->
+                          
+                          <!-- <button v-if="user3.facebook" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflFb" @click="getPersonneFacebook(user3.id)">
                           Facebook</button> 
                           <button v-if="user3.youtube" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflYtb" @click="getPersonneYoutube(user3.id)">
                           Youtube</button> 
                           <button v-if="user3.snapchat" type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#updateInflSnap" @click="getPersonneSnapchat(user3.id)">
-                          Snapchat</button> 
+                          Snapchat</button>  -->
                           </td>
                           <!-- <edit-infl></edit-infl> -->
                         <td>
                           <a @click="deletePersonne(user3.id)">
-                            <i class="bi bi-pencil-square"></i>
-                            <Icon type="ios-trash" />
+                            
+                               <Icon type="ios-trash" />
                           </a>
                         </td>
                         

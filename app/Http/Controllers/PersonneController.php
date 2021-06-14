@@ -512,17 +512,23 @@ class PersonneController extends Controller
         $fb=Facebook::where('personne_id',$personne->id)->first();
         $ytb=Youtube::where('personne_id',$personne->id)->first();
         $snap=Snapchat::where('personne_id',$personne->id)->first();
-        if($insta)
-        $fb->domaine()->detach();
-        if($insta)
+        if($fb ) //&& $fb->domaine()!=null           
+            $fb->domaine()->detach();
+        if($insta ) //&& $insta->domaine()!=null           
            $insta->domaine()->detach();
-        if($ytb)            
+        if($ytb) //&& $ytb->domaine()!=null           
             $ytb->domaine()->detach();
-        if($snap)
+        if($snap)//&& $snap->domaine()!=null
             $snap->domaine()->detach();
         $personne->historique()->detach();
         if($personne->getpersonne_info)
             $personne->getpersonne_info->delete();
+        $img=$personne->photo;
+        // dd(getcwd()); // pour voir le chemin
+        // dd($img);
+        // dd(strlen($img));
+        if(strlen($img)>8)
+            unlink(getcwd().$img);
         $personne->delete();
         DB::commit();
         return response()->json(['message'=>'suppression bien fait personne']);

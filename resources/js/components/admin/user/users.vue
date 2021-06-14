@@ -25,12 +25,16 @@
                         <td>{{user3.email}}</td>
                         <td>{{user3.added }}</td>
                         <td>{{user3.updated }}</td>
-                        <td><button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#editModal" @click="getManager(user3.id)">
-                        Editer</button>
+                        <td>
+                            <!-- <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#editModal" @click="getManager(user3.id)">
+                        Editer</button> -->
+                        <button type="button" class="btn btn-outline-warning" data-toggle="modal" data-target="#editModal" @click="getManager(user3.id)"><Icon type="md-build" /></button>
                         </td>
-                        <td><button type="button" class="btn btn-danger float-left"  @click="deleteUser(user3.id)">
+                        <td>
+                            <!-- <button type="button" class="btn btn-danger float-left"  @click="deleteUser(user3.id)">
                         <Icon type="ios-trash" />
-                        </button>
+                        </button> -->
+                        <button type="button" class="btn btn-outline-danger" @click="deleteUser(user3.id)"><Icon type="ios-trash" /></button>
                         </td>
                         </template>
                         </tr>

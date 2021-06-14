@@ -428,12 +428,12 @@
 										<div class="productinfo text-center">
                                             <img :src="user1.photo" alt="" />
 											<router-link :to="{name:'UserDetails',params:{user1,date_per:user1.date}}">
-												<p @click="passId(user1.id)">{{user1.nom}}</p>
+												<p class="btn btn-default add-to-cart" @click="passId(user1.id)">{{user1.nom}}</p>
 											</router-link>
 											<!-- <router-link :to="{name:'UserDetails',params:{id:user1.id}}">
 												<p>{{user1.nom}}</p>
 											</router-link> -->
-											<a href="#" class="btn btn-default add-to-cart"><i class=""></i>test</a>
+											<!-- <a href="#" class="btn btn-default add-to-cart"><i class=""></i>test</a> -->
 										</div>
 										<!-- <div class="product-overlay">
 											<div class="overlay-content">

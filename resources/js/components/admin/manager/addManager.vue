@@ -4,10 +4,12 @@
                     Ajouter 
   </button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> -->
-      <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#add_manager">
+      <!-- <button type="success" class="btn btn-primary float-left" data-toggle="modal" data-target="#add_manager">
      Ajouter 
-  </button>
-    <div class="modal fade" id="add_manager" tabindex="0" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  </button>  -->
+  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#add_manager"><Icon type="md-add" /></button>
+  
+  <div class="modal fade" id="add_manager" tabindex="0" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -17,9 +19,11 @@
         </button>
       </div>
       <div class="modal-body">
+        <br>
         <form>
           <!-- <input type="hidden" name="_token" v-bind:value="csrf"> -->
           <div class="form-group">
+            
             <label for="" class="col-from-label">
               Nom:
             </label>

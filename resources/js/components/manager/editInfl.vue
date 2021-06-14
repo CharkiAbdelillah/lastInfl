@@ -46,7 +46,7 @@
         </div>
         <div class="form-group">
           <label for="exampleInputFile">Photo</label>
-          <input type="file" name="image" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" v-on:change="onImageChange">
+          <input type="file" name="image" accept="image/*" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" v-on:change="onImageChange">
           <small id="fileHelp" class="form-text text-muted"><Icon type="ios-images" /></small>
         </div>
           <div class="modal-footer">

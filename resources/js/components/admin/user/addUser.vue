@@ -1,8 +1,9 @@
 <template>
 <div>
-  <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#add_user">
+  <!-- <button type="button" class="btn btn-primary float-left" data-toggle="modal" data-target="#add_user">
      Ajouter 
-  </button>
+  </button> -->
+  <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#add_user"><Icon type="md-add" /></button>
     <div class="modal fade" id="add_user" tabindex="0" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
