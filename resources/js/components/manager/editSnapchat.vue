@@ -133,7 +133,7 @@ export default{
         Swal.fire({
           position:"center",
           icon:"success",
-          title:"Personne modifie",
+          title:"Snapchat modifie",
           showConfirmButton:false,
           timer:1500
         });

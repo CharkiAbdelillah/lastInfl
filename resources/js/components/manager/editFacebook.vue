@@ -132,7 +132,7 @@ export default{
         Swal.fire({
           position:"center",
           icon:"success",
-          title:"Personne modifie",
+          title:"Facebook modifie",
           showConfirmButton:false,
           timer:1500
         });

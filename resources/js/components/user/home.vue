@@ -207,11 +207,11 @@
 								</div>
 							</div>
 							
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">test</a></h4>
 								</div>
-							</div>
+							</div> -->
 						</div><!--/category-products-->
 						<h2>select number</h2>
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
@@ -386,11 +386,11 @@
 								</div>
 							</div>
 							
-							<div class="panel panel-default">
+							<!-- <div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title"><a href="#">test</a></h4>
 								</div>
-							</div>
+							</div> -->
 						</div><!--/category-products-->					
 						<div class="brands_products"><!--brands_products-->
 							<h2>Historique</h2>
